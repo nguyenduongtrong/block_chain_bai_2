@@ -47,15 +47,15 @@ pynacl, coincurve, mnemonic)
 
 ## 🎮 Hướng dẫn sử dụng (Command Line)
 
-Cú pháp chung: `python wallet.py [COMMAND] [OPTIONS]`
+Cú pháp chung: `python main.py [COMMAND] [OPTIONS]`
 
 | Lệnh      | Mô tả                             | Ví dụ                                       |
 |----------|------------------------------------|---------------------------------------------|
-| create   | Tạo ví mới và sinh 12 từ khóa      | python wallet.py create --algo ecdsa        |
-| recover  | Khôi phục ví từ 12 từ khóa         | python wallet.py recover --algo ed25519     |
-| sign     | Ký một thông điệp/giao dịch        | python wallet.py sign "Transfer 10 ETH"     |
-| info     | Xem thông tin ví đang lưu          | python wallet.py info                       |
-| benchmark| Chạy bài test hiệu năng            | python wallet.py benchmark                  |
+| create   | Tạo ví mới và sinh 12 từ khóa      | python main.py create --algo ecdsa        |
+| recover  | Khôi phục ví từ 12 từ khóa         | python main.py recover --algo ed25519     |
+| sign     | Ký một thông điệp/giao dịch        | python main.py sign "Transfer 10 ETH"     |
+| info     | Xem thông tin ví đang lưu          | python main.py info                       |
+| benchmark| Chạy bài test hiệu năng            | python main.py benchmark                  |
 
 ## 🎬 Kịch bản Demo (Dành cho báo cáo)
 
@@ -64,7 +64,7 @@ Sử dụng kịch bản này để trình bày các tính năng cốt lõi củ
 ### Tình huống 1: Người dùng mới (User Onboarding)
 
 -   Mục tiêu: Chứng minh khả năng tạo ví và lưu trữ tự động.
--   Chạy lệnh: `python wallet.py create --algo ecdsa`
+-   Chạy lệnh: `python main.py create --algo ecdsa`
 
 Kết quả:
 
@@ -78,7 +78,7 @@ Hành động: Lưu lại 12 từ khóa này ra file nháp.
 
 -   Mục tiêu: Chứng minh tính năng Persistence (không cần nhập lại
     khóa).
--   Chạy lệnh: `python wallet.py sign "Gui 5 ETH cho Bob"`
+-   Chạy lệnh: `python main.py sign "Gui 5 ETH cho Bob"`
 
 Kết quả:
 
@@ -89,7 +89,7 @@ Kết quả:
 
 -   Mục tiêu: Chứng minh tính an toàn và tất định của BIP-39.
 -   Hành động: Xóa file keystore.json (giả lập mất máy).
--   Chạy lệnh: `python wallet.py recover --algo ecdsa`
+-   Chạy lệnh: `python main.py recover --algo ecdsa`
 
 Nhập liệu: Nhập 12 từ khóa đã lưu ở Tình huống 1.
 
@@ -99,7 +99,7 @@ huống 1. -\> Khôi phục thành công.
 ### Tình huống 4: Đa chuỗi (Cross-Chain)
 
 -   Mục tiêu: Chứng minh 1 Seed dùng được cho nhiều mạng.
--   Chạy lệnh: `python wallet.py recover --algo ed25519` (Chuyển sang
+-   Chạy lệnh: `python main.py recover --algo ed25519` (Chuyển sang
     Solana)
 
 Nhập liệu: Vẫn nhập 12 từ khóa cũ.
@@ -110,7 +110,7 @@ tương thích với mạng Solana, chứng minh khả năng HD Wallet.
 ### Tình huống 5: So sánh hiệu năng (Benchmark)
 
 -   Mục tiêu: Phân tích kỹ thuật (Research).
--   Chạy lệnh: `python wallet.py benchmark`
+-   Chạy lệnh: `python main.py benchmark`
 
 Kết quả: Bảng so sánh hiện ra.
 
@@ -127,3 +127,4 @@ Purpose). Trong thực tế sản xuất (Production):
 -   Không bao giờ hiển thị Private Key hoặc Mnemonic ra màn hình trừ lần
 
     đầu tiên tạo ví.
+
