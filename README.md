@@ -49,22 +49,13 @@ pynacl, coincurve, mnemonic)
 
 Cú pháp chung: `python wallet.py [COMMAND] [OPTIONS]`
 
-  ----------------------------------------------------------------------------
-  Lệnh        Mô tả                        Ví dụ
-  ----------- ---------------------------- -----------------------------------
-  create      Tạo ví mới và sinh 12 từ     python wallet.py create --algo
-              khóa                         ecdsa
-
-  recover     Khôi phục ví từ 12 từ khóa   python wallet.py recover --algo
-                                           ed25519
-
-  sign        Ký một thông điệp/giao dịch  python wallet.py sign "Transfer 10
-                                           ETH"
-
-  info        Xem thông tin ví đang lưu    python wallet.py info
-
-  benchmark   Chạy bài test hiệu năng      python wallet.py benchmark
-  ----------------------------------------------------------------------------
+| Lệnh      | Mô tả                             | Ví dụ                                       |
+|----------|------------------------------------|---------------------------------------------|
+| create   | Tạo ví mới và sinh 12 từ khóa      | python wallet.py create --algo ecdsa        |
+| recover  | Khôi phục ví từ 12 từ khóa         | python wallet.py recover --algo ed25519     |
+| sign     | Ký một thông điệp/giao dịch        | python wallet.py sign "Transfer 10 ETH"     |
+| info     | Xem thông tin ví đang lưu          | python wallet.py info                       |
+| benchmark| Chạy bài test hiệu năng            | python wallet.py benchmark                  |
 
 ## 🎬 Kịch bản Demo (Dành cho báo cáo)
 
@@ -134,4 +125,5 @@ Purpose). Trong thực tế sản xuất (Production):
 -   File keystore.json cần được mã hóa bằng mật khẩu người dùng
     (AES-256).
 -   Không bao giờ hiển thị Private Key hoặc Mnemonic ra màn hình trừ lần
+
     đầu tiên tạo ví.
