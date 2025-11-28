@@ -1,0 +1,8 @@
+click
+tabulate
+eth-keys
+eth-utils
+pynacl
+coincurve
+mnemonic
+eth-hash[pycryptodome]
